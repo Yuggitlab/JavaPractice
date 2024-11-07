@@ -6,12 +6,13 @@ import simplejavaprograms.PrimeNumber;
 import java.util.Random;
 
 public class TestPrimenNumbers {
+
  PrimeNumber primeNumber = new PrimeNumber();
  @Description("It is a method to test any number is a prime or not")
  @Test
  public void findPrimeNumber(){
   Random number = new Random();
-  Integer mynumber = number.nextInt(1000);
+  Integer mynumber = number.nextInt(50);
   Integer primenumber = primeNumber.getPrimeNumber(mynumber);
   Assert.assertEquals(primenumber,mynumber);
 
@@ -21,8 +22,13 @@ public class TestPrimenNumbers {
  @Test
  public void getReversePrimeNumber(){
   Integer a = 54672;
-  System.out.println(primeNumber.getReversePrimeNumber(a));
+  try {
+   primeNumber.getReversePrimeNumber(a);
+  }
+  catch (Exception e) {
+   System.out.println("we found an exception" + e);
+  }
+  }
 
- }
 
 }

@@ -3,14 +3,20 @@ package simplejavaprograms;
 public class PrimeNumber {
 
     public Integer getPrimeNumber(Integer a){
-        if (a % 2 == 0)
-            System.out.println(a + "is a prime number");
-        else{
-            System.out.println(a);
+        Integer i =2;
+        for ( ; i < a ; i++ ) {
+            if (a % i == 0) {
+                System.out.println(a + "Not a prime number");
+                break;
+            }
+        }
+        if(i == a){
+            System.out.println("Prime number is"+ a);
         }
         return a;
     }
-    public String getReversePrimeNumber(Integer a ){
+
+    public String getReversePrimeNumber(Integer a ) throws StringIndexOutOfBoundsException{
         String reversenumber ="";
         String firstnumber = a.toString().substring(0);
         String lastnumber = "";
@@ -29,3 +35,4 @@ public class PrimeNumber {
     }
 
 }
+
