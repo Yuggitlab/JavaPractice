@@ -1,6 +1,7 @@
 import jdk.jfr.Description;
 import org.junit.Assert;
 import org.junit.Test;
+import simplejavaprograms.PatternBuilder;
 import simplejavaprograms.PrimeNumber;
 
 import java.util.Random;
@@ -28,6 +29,12 @@ public class TestPrimenNumbers {
   catch (Exception e) {
    System.out.println("we found an exception" + e);
   }
+  }
+
+  @Test
+ public void testPrintCurtan(){
+   PatternBuilder patternBuilder = new PatternBuilder();
+   patternBuilder.curtonAlphabets();
   }
 
 
